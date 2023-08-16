@@ -1,0 +1,88 @@
+trait method QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"generateKey")
+   dispid 0
+   method
+      name "com.ankamagames.dofus.misc.interClient:InterClientKeyManager/private:generateKey"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 3
+         localcount 4
+         initscopedepth 4
+         maxscopedepth 5
+         
+         code
+            debugfile "C:\\akrb1bld1dof04-a\\work\\cbe7d596d85455f\\client-parent-air\\core\\src\\main\\flex;com\\ankamagames\\dofus\\misc\\interClient;InterClientKeyManager.as"
+            debugline 123
+            getlocal0
+            pushscope
+            pushnull
+            coerce_s
+            setlocal1
+            debug 1, "flashKey", 0, 124
+            debug 1, "so", 1, 127
+            debug 1, "cacheKey", 2, 128
+            debugline 127
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.types"),"CustomSharedObject")
+            pushstring "uid"
+            callproperty QName(PackageNamespace(""),"getLocal"), 1
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.types"),"CustomSharedObject")
+            setlocal2
+            debugline 128
+            getlocal2
+            getproperty QName(PackageNamespace(""),"data")
+            pushstring "identity1"
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.misc.interClient"),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace("InterClientKeyManager.as$3707"),PackageInternalNs("com.ankamagames.dofus.misc.interClient"),ProtectedNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),StaticProtectedNs("com.ankamagames.dofus.misc.interClient:InterClientKeyManager")])
+            coerce_s
+            setlocal3
+            debugline 129
+            getlocal3
+            not
+            dup
+            iftrue ofs005b
+            pop
+            getlocal3
+            getproperty QName(PackageNamespace(""),"length")
+            getlex QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"KEY_SIZE")
+            pushbyte 3
+            subtract
+            greaterthan
+   ofs005b:
+            iffalse ofs0089
+            debugline 131
+            findpropstrict QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"getRandomFlashKey")
+            callproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"getRandomFlashKey"), 0
+            coerce_s
+            setlocal1
+            debugline 132
+            getlocal2
+            getproperty QName(PackageNamespace(""),"data")
+            pushstring "identity"
+            getlocal1
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.misc.interClient"),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace("InterClientKeyManager.as$3707"),PackageInternalNs("com.ankamagames.dofus.misc.interClient"),ProtectedNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),StaticProtectedNs("com.ankamagames.dofus.misc.interClient:InterClientKeyManager")])
+            debugline 133
+            getlocal2
+            callpropvoid QName(PackageNamespace(""),"flush"), 0
+            jump ofs008f
+   ofs0089:
+            debugline 136
+            getlocal3
+            coerce_s
+            setlocal1
+   ofs008f:
+            debugline 138
+            getlocal2
+            callpropvoid QName(PackageNamespace(""),"close"), 0
+            debugline 141
+            getlocal0
+            getlocal1
+            callpropvoid QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"saveKey"), 1
+            debugline 143
+            getlocal0
+            pushfalse
+            initproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_initKey")
+            debugline 144
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait

@@ -1,0 +1,363 @@
+trait method QName(PackageNamespace(""),"initNewTrip")
+   dispid 0
+   method
+      name "com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager/initNewTrip"
+      flag HAS_PARAM_NAMES
+      param QName(PackageNamespace(""),"Number")
+      paramname "getWorker"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 11
+         localcount 6
+         initscopedepth 4
+         maxscopedepth 5
+         
+         code
+            debugfile "C:\\akrb1bld1dof03-a\\work\\cbe7d596d85455f\\client-parent-air\\core\\src\\main\\flex;com\\ankamagames\\dofus\\logic\\game\\roleplay\\managers;MountAutoTripManager.as"
+            debugline 136
+            getlocal0
+            pushscope
+            debug 1, "mapId", 0, 136
+            debug 1, "destinationSubArea", 1, 185
+            debug 1, "currentSubArea", 2, 196
+            debug 1, "destMapName", 3, 211
+            debug 1, "commonMod", 4, 213
+            debugline 138
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_routeCalculating")
+            iffalse ofs0090
+            debugline 140
+            getlex QName(PackageNamespace("com.ankamagames.berilia.managers"),"KernelEventsManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            debugline 140
+            getlex QName(PackageNamespace("com.ankamagames.dofus.misc.lists"),"ChatHookList")
+            getproperty QName(PackageNamespace(""),"TextInformation")
+            debugline 141
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.mountTrip.error.alreadySearchingRoute"
+            callproperty QName(PackageNamespace(""),"getUiText"), 1
+            debugline 142
+            getlex QName(PackageNamespace("com.ankamagames.dofus.network.enums"),"ChatActivableChannelsEnum")
+            getproperty QName(PackageNamespace(""),"PSEUDO_CHANNEL_INFO")
+            debugline 143
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"TimeManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            callproperty QName(PackageNamespace(""),"getTimestamp"), 0
+            callpropvoid QName(PackageNamespace(""),"processCallback"), 4
+            debugline 144
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "Une recherche d\'itinéraire est deja en cours"
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 145
+            returnvoid
+   ofs0090:
+            debugline 147
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_travelling")
+            iffalse ofs00f0
+            debugline 149
+            getlex QName(PackageNamespace("com.ankamagames.berilia.managers"),"KernelEventsManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            debugline 149
+            getlex QName(PackageNamespace("com.ankamagames.dofus.misc.lists"),"ChatHookList")
+            getproperty QName(PackageNamespace(""),"TextInformation")
+            debugline 150
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.mountTrip.error.alreadyTraveling"
+            callproperty QName(PackageNamespace(""),"getUiText"), 1
+            debugline 151
+            getlex QName(PackageNamespace("com.ankamagames.dofus.network.enums"),"ChatActivableChannelsEnum")
+            getproperty QName(PackageNamespace(""),"PSEUDO_CHANNEL_INFO")
+            debugline 152
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"TimeManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            callproperty QName(PackageNamespace(""),"getTimestamp"), 0
+            callpropvoid QName(PackageNamespace(""),"processCallback"), 4
+            debugline 153
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "Un voyage est deja en cours, il faut le stopper pour pouvoir en lancer un autre"
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 154
+            returnvoid
+   ofs00f0:
+            debugline 157
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isSpectator")
+            convert_b
+            dup
+            iftrue ofs0111
+            pop
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isFighting")
+            convert_b
+   ofs0111:
+            iffalse ofs0128
+            debugline 159
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "Impossible de voyager en étant en combat"
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 160
+            returnvoid
+   ofs0128:
+            debugline 163
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isInHouse")
+            convert_b
+            dup
+            iftrue ofs0149
+            pop
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isInHavenbag")
+            convert_b
+   ofs0149:
+            iffalse ofs01a1
+            debugline 165
+            getlex QName(PackageNamespace("com.ankamagames.berilia.managers"),"KernelEventsManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            debugline 165
+            getlex QName(PackageNamespace("com.ankamagames.dofus.misc.lists"),"ChatHookList")
+            getproperty QName(PackageNamespace(""),"TextInformation")
+            debugline 166
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.fight.wrongMap"
+            callproperty QName(PackageNamespace(""),"getUiText"), 1
+            debugline 167
+            getlex QName(PackageNamespace("com.ankamagames.dofus.network.enums"),"ChatActivableChannelsEnum")
+            getproperty QName(PackageNamespace(""),"PSEUDO_CHANNEL_INFO")
+            debugline 168
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"TimeManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            callproperty QName(PackageNamespace(""),"getTimestamp"), 0
+            callpropvoid QName(PackageNamespace(""),"processCallback"), 4
+            debugline 169
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "Impossible de voyager depuis un intérieur"
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 170
+            returnvoid
+   ofs01a1:
+            debugline 173
+            getlocal1
+            iftrue ofs01ad
+            debugline 175
+            returnvoid
+   ofs01ad:
+            debugline 178
+            getlocal0
+            getlex QName(PackageNamespace("com.ankamagames.dofus.datacenter.world"),"MapPosition")
+            getlocal1
+            callproperty QName(PackageNamespace(""),"getMapPositionById"), 1
+            initproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            debugline 179
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            not
+            dup
+            iftrue ofs01d5
+            pop
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            getproperty QName(PackageNamespace(""),"subArea")
+            not
+   ofs01d5:
+            iffalse ofs01ee
+            debugline 181
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "La sous-zone est introuvable pour la map "
+            getlocal1
+            add
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 182
+            returnvoid
+   ofs01ee:
+            debugline 185
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            getproperty QName(PackageNamespace(""),"subArea")
+            coerce QName(PackageNamespace("com.ankamagames.dofus.datacenter.world"),"SubArea")
+            setlocal2
+            debugline 186
+            getlocal2
+            getproperty QName(PackageNamespace(""),"mountAutoTripAllowed")
+            not
+            dup
+            iffalse ofs0215
+            pop
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.common.managers"),"PlayerManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"hasRights")
+   ofs0215:
+            iffalse ofs0278
+            debugline 188
+            getlex QName(PackageNamespace("com.ankamagames.berilia.managers"),"KernelEventsManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            debugline 188
+            getlex QName(PackageNamespace("com.ankamagames.dofus.misc.lists"),"ChatHookList")
+            getproperty QName(PackageNamespace(""),"TextInformation")
+            debugline 189
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.mountTrip.error.forbiddenDestinationSubarea"
+            getlocal2
+            getproperty QName(PackageNamespace(""),"name")
+            newarray 1
+            callproperty QName(PackageNamespace(""),"getUiText"), 2
+            debugline 190
+            getlex QName(PackageNamespace("com.ankamagames.dofus.network.enums"),"ChatActivableChannelsEnum")
+            getproperty QName(PackageNamespace(""),"PSEUDO_CHANNEL_INFO")
+            debugline 191
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"TimeManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            callproperty QName(PackageNamespace(""),"getTimestamp"), 0
+            callpropvoid QName(PackageNamespace(""),"processCallback"), 4
+            debugline 192
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "Le voyage automatique de monture est interdit vers la zone "
+            getlocal2
+            getproperty QName(PackageNamespace(""),"name")
+            add
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 193
+            returnvoid
+   ofs0278:
+            debugline 196
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"currentSubArea")
+            coerce QName(PackageNamespace("com.ankamagames.dofus.datacenter.world"),"SubArea")
+            setlocal3
+            debugline 197
+            getlocal3
+            getproperty QName(PackageNamespace(""),"mountAutoTripAllowed")
+            not
+            dup
+            iffalse ofs02a2
+            pop
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.common.managers"),"PlayerManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"hasRights")
+   ofs02a2:
+            iffalse ofs0305
+            debugline 199
+            getlex QName(PackageNamespace("com.ankamagames.berilia.managers"),"KernelEventsManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            debugline 199
+            getlex QName(PackageNamespace("com.ankamagames.dofus.misc.lists"),"ChatHookList")
+            getproperty QName(PackageNamespace(""),"TextInformation")
+            debugline 200
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.mountTrip.error.forbiddenStartSubarea"
+            getlocal3
+            getproperty QName(PackageNamespace(""),"name")
+            newarray 1
+            callproperty QName(PackageNamespace(""),"getUiText"), 2
+            debugline 201
+            getlex QName(PackageNamespace("com.ankamagames.dofus.network.enums"),"ChatActivableChannelsEnum")
+            getproperty QName(PackageNamespace(""),"PSEUDO_CHANNEL_INFO")
+            debugline 202
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"TimeManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            callproperty QName(PackageNamespace(""),"getTimestamp"), 0
+            callpropvoid QName(PackageNamespace(""),"processCallback"), 4
+            debugline 203
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "Le voyage automatique de monture est interdit depuis la zone "
+            getlocal3
+            getproperty QName(PackageNamespace(""),"name")
+            add
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 204
+            returnvoid
+   ofs0305:
+            debugline 208
+            getlocal0
+            pushtrue
+            initproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_routeCalculating")
+            debugline 211
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.common.managers"),"HyperlinkMapPosition")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            getproperty QName(PackageNamespace(""),"posX")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            getproperty QName(PackageNamespace(""),"posY")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            getproperty QName(PackageNamespace(""),"worldMap")
+            callproperty QName(PackageNamespace(""),"getLink"), 3
+            pushstring " ("
+            add
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_destinationMapPosition")
+            getproperty QName(PackageNamespace(""),"subArea")
+            getproperty QName(PackageNamespace(""),"name")
+            add
+            pushstring ")"
+            add
+            setlocal 4
+            debugline 213
+            getlex QName(PackageNamespace("com.ankamagames.berilia.managers"),"UiModuleManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            pushstring "Ankama_Common"
+            callproperty QName(PackageNamespace(""),"getModule"), 1
+            getproperty QName(PackageNamespace(""),"mainClass")
+            coerce QName(PackageNamespace(""),"Object")
+            setlocal 5
+            debugline 214
+            getlocal0
+            getlocal 5
+            debugline 214
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.mountTrip.trip"
+            callproperty QName(PackageNamespace(""),"getUiText"), 1
+            debugline 215
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.mountTrip.searchingRoute"
+            getlocal 4
+            newarray 1
+            callproperty QName(PackageNamespace(""),"getUiText"), 2
+            debugline 216
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.common.ok"
+            callproperty QName(PackageNamespace(""),"getUiText"), 1
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.common.cancel"
+            callproperty QName(PackageNamespace(""),"getUiText"), 1
+            newarray 2
+            debugline 217
+            pushnull
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"onAbortTripByPopup")
+            newarray 2
+            debugline 218
+            pushnull
+            pushnull
+            pushnull
+            pushfalse
+            pushtrue
+            callproperty Multiname("openPopup",[PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.roleplay.managers"),PrivateNamespace("MountAutoTripManager.as$4150"),PackageInternalNs("com.ankamagames.dofus.logic.game.roleplay.managers"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager")]), 9
+            initproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_popupName")
+            debugline 220
+            getlex QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"_log")
+            pushstring "Calcul de l\'itinéraire vers "
+            getlocal1
+            add
+            pushstring " en cours..."
+            add
+            callpropvoid QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"debug"), 1
+            debugline 221
+            getlex QName(PackageNamespace("com.ankamagames.dofus.modules.utils.pathfinding.world"),"WorldPathFinder")
+            getlocal1
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.roleplay.managers:MountAutoTripManager"),"onRouteFound")
+            callpropvoid QName(PackageNamespace(""),"findPath"), 2
+            debugline 222
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait

@@ -1,0 +1,153 @@
+trait method QName(PackageNamespace(""),"init")
+   flag FINAL
+   flag METADATA
+   metadata "__go_to_definition_help"
+      item "pos" "1094"
+   end ; metadata
+   dispid 3
+   method
+      name "com.ankamagames.dofus.misc.utils:CursorConstant/init"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 3
+         localcount 6
+         initscopedepth 3
+         maxscopedepth 4
+         
+         code
+            debugfile "F:\\GitHub\\DofusInvoker\\src;com\\ankamagames\\dofus\\misc\\utils;CursorConstant.as"
+            debugline 31
+            getlocal0
+            pushscope
+            debug 1, "file", 0, 39
+            debug 1, "fileStream", 1, 45
+            debug 1, "byteArray", 2, 47
+            debug 1, "loader", 3, 50
+            debug 1, "context", 4, 51
+            debugline 33
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            pushstring "resizeV"
+            getglobalscope
+            getslot 1
+            getproperty QName(PackageNamespace(""),"resizeV")
+            construct 0
+            callproperty QName(PackageNamespace(""),"registerSpecificCursor"), 2
+            pop
+            debugline 34
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            pushstring "resizeH"
+            getglobalscope
+            getslot 1
+            getproperty QName(PackageNamespace(""),"resizeH")
+            construct 0
+            callproperty QName(PackageNamespace(""),"registerSpecificCursor"), 2
+            pop
+            debugline 35
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            pushstring "resizeL"
+            getglobalscope
+            getslot 1
+            getproperty QName(PackageNamespace(""),"resizeL")
+            construct 0
+            callproperty QName(PackageNamespace(""),"registerSpecificCursor"), 2
+            pop
+            debugline 36
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            pushstring "resizeR"
+            getglobalscope
+            getslot 1
+            getproperty QName(PackageNamespace(""),"resizeR")
+            construct 0
+            callproperty QName(PackageNamespace(""),"registerSpecificCursor"), 2
+            pop
+            debugline 37
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"CursorSpriteManager")
+            pushstring "drag"
+            getglobalscope
+            getslot 1
+            getproperty QName(PackageNamespace(""),"drag")
+            construct 0
+            callproperty QName(PackageNamespace(""),"registerSpecificCursor"), 2
+            pop
+            debugline 39
+            findpropstrict QName(PackageNamespace("flash.filesystem"),"File")
+            getproperty QName(PackageNamespace("flash.filesystem"),"File")
+            getproperty QName(PackageNamespace(""),"applicationDirectory")
+            pushstring "AlpaInvoker.swf"
+            callproperty QName(PackageNamespace(""),"resolvePath"), 1
+            coerce QName(PackageNamespace("flash.filesystem"),"File")
+            setlocal1
+            debugline 41
+            getlocal1
+            getproperty QName(PackageNamespace(""),"exists")
+            not
+            iffalse ofs009b
+            debugline 42
+            returnvoid
+   ofs009b:
+            debugline 45
+            findpropstrict QName(PackageNamespace("flash.filesystem"),"FileStream")
+            constructprop QName(PackageNamespace("flash.filesystem"),"FileStream"), 0
+            coerce QName(PackageNamespace("flash.filesystem"),"FileStream")
+            setlocal2
+            debugline 46
+            getlocal2
+            getlocal1
+            findpropstrict QName(PackageNamespace("flash.filesystem"),"FileMode")
+            getproperty QName(PackageNamespace("flash.filesystem"),"FileMode")
+            getproperty QName(PackageNamespace(""),"READ")
+            callproperty QName(PackageNamespace(""),"open"), 2
+            pop
+            debugline 47
+            findpropstrict QName(PackageNamespace("flash.utils"),"ByteArray")
+            constructprop QName(PackageNamespace("flash.utils"),"ByteArray"), 0
+            coerce QName(PackageNamespace("flash.utils"),"ByteArray")
+            setlocal3
+            debugline 48
+            getlocal2
+            getlocal3
+            callproperty QName(PackageNamespace(""),"readBytes"), 1
+            pop
+            debugline 49
+            getlocal2
+            callproperty QName(PackageNamespace(""),"close"), 0
+            pop
+            debugline 50
+            findpropstrict QName(PackageNamespace("flash.display"),"Loader")
+            constructprop QName(PackageNamespace("flash.display"),"Loader"), 0
+            coerce QName(PackageNamespace("flash.display"),"Loader")
+            setlocal 4
+            debugline 51
+            findpropstrict QName(PackageNamespace("flash.system"),"LoaderContext")
+            pushfalse
+            findpropstrict QName(PackageNamespace("flash.system"),"ApplicationDomain")
+            getproperty QName(PackageNamespace("flash.system"),"ApplicationDomain")
+            getproperty QName(PackageNamespace(""),"currentDomain")
+            constructprop QName(PackageNamespace("flash.system"),"LoaderContext"), 2
+            coerce QName(PackageNamespace("flash.system"),"LoaderContext")
+            setlocal 5
+            debugline 52
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.utils.system"),"AirScanner")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.utils.system"),"AirScanner")
+            getlocal 5
+            pushtrue
+            callproperty QName(PackageNamespace(""),"allowByteCodeExecution"), 2
+            pop
+            debugline 53
+            getlocal 4
+            getlocal3
+            getlocal 5
+            callproperty QName(PackageNamespace(""),"loadBytes"), 2
+            pop
+            debugline 54
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait

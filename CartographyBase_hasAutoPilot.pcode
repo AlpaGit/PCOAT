@@ -1,0 +1,21 @@
+trait method QName(PrivateNamespace("Ankama_Cartography.ui:CartographyBase"),"hasAutoPilot")
+   dispid 0
+   method
+      name "Ankama_Cartography.ui:CartographyBase/private:hasAutoPilot"
+      returns QName(PackageNamespace(""),"Boolean")
+      
+      body
+         maxstack 2
+         localcount 8
+         initscopedepth 5
+         maxscopedepth 6
+         
+         code
+            debugfile "C:\\akrb1bld1dof03-a\\work\\cbe7d596d85455f\\client-parent-air\\modules-parent\\src\\main\\flex;Ankama_Cartography\\ui;CartographyBase.as"
+            debugline 1614
+            pushtrue
+            returnvalue
+         end ; code
+      end ; body
+   end ; method
+end ; trait

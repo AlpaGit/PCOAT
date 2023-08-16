@@ -1,0 +1,66 @@
+trait method QName(PackageNamespace(""),"autoTravel")
+   dispid 0
+   method
+      name "com.ankamagames.dofus.logic.game.common.managers:CharacterDisplacementManager/autoTravel"
+      flag HAS_OPTIONAL
+      flag HAS_PARAM_NAMES
+      param QName(PackageNamespace(""),"int")
+      param QName(PackageNamespace(""),"int")
+      param QName(PackageNamespace(""),"int")
+      paramname "getLogger"
+      paramname "getLogger"
+      paramname "getLogger"
+      optional Integer(-1)
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 5
+         localcount 16
+         initscopedepth 4
+         maxscopedepth 5
+         
+         code
+            debugfile "C:\\akrb1bld1dof03-a\\work\\cbe7d596d85455f\\client-parent-air\\core\\src\\main\\flex;com\\ankamagames\\dofus\\logic\\game\\common\\managers;CharacterDisplacementManager.as"
+            debugline 82
+            debugline 171
+            getlocal0
+            getlocal1
+            getlocal2
+            getlocal3
+            callproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.common.managers:CharacterDisplacementManager"),"getOrderedMapIdsFromCoords"), 3
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 11
+            debugline 172
+            getlocal 11
+            iftrue ofs005e
+            debugline 174
+            getlex QName(PackageNamespace("com.ankamagames.berilia.managers"),"KernelEventsManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            debugline 174
+            getlex QName(PackageNamespace("com.ankamagames.dofus.misc.lists"),"ChatHookList")
+            getproperty QName(PackageNamespace(""),"TextInformation")
+            getlex QName(PackageNamespace("com.ankamagames.jerakine.data"),"I18n")
+            pushstring "ui.mountTrip.error.noDestinationMap"
+            callproperty QName(PackageNamespace(""),"getUiText"), 1
+            debugline 175
+            getlex QName(PackageNamespace("com.ankamagames.dofus.network.enums"),"ChatActivableChannelsEnum")
+            getproperty QName(PackageNamespace(""),"PSEUDO_CHANNEL_INFO")
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"TimeManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            callproperty QName(PackageNamespace(""),"getTimestamp"), 0
+            callpropvoid QName(PackageNamespace(""),"processCallback"), 4
+            debugline 176
+            returnvoid
+   ofs005e:
+            debugline 179
+            getlex QName(PackageNamespace("com.ankamagames.dofus.logic.game.roleplay.managers"),"MountAutoTripManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getlocal 11
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"pop"), 0
+            callpropvoid QName(PackageNamespace(""),"initNewTrip"), 1
+            debugline 180
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait

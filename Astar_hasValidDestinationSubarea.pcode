@@ -1,0 +1,77 @@
+trait method QName(PrivateNamespace("com.ankamagames.dofus.modules.utils.pathfinding.astar:AStar"),"hasValidDestinationSubarea")
+   flag FINAL
+   dispid 8
+   method
+      name "com.ankamagames.dofus.modules.utils.pathfinding.astar:AStar/private:hasValidDestinationSubarea"
+      flag HAS_PARAM_NAMES
+      param QName(PackageNamespace("com.ankamagames.dofus.modules.utils.pathfinding.world"),"Edge")
+      paramname "buildResultPath"
+      returns QName(PackageNamespace(""),"Boolean")
+      
+      body
+         maxstack 2
+         localcount 6
+         initscopedepth 3
+         maxscopedepth 4
+         
+         code
+            debugfile "C:\\akrb1bld1dof03-a\\work\\cbe7d596d85455f\\client-parent-air\\core\\src\\main\\flex;com\\ankamagames\\dofus\\modules\\utils\\pathfinding\\astar;AStar.as"
+            debugline 171
+            getlocal0
+            pushscope
+            debug 1, "edge", 0, 171
+            debug 1, "fromMapId", 1, 173
+            debug 1, "fromSubareaId", 2, 174
+            debug 1, "toMapId", 3, 175
+            debug 1, "toSubareaId", 4, 176
+            debugline 173
+            getlocal1
+            getproperty QName(PackageNamespace(""),"from")
+            getproperty QName(PackageNamespace(""),"mapId")
+            convert_d
+            setlocal2
+            debugline 174
+            getlex QName(PackageNamespace("com.ankamagames.dofus.datacenter.world"),"MapPosition")
+            getlocal2
+            callproperty QName(PackageNamespace(""),"getMapPositionById"), 1
+            getproperty QName(PackageNamespace(""),"subAreaId")
+            convert_i
+            setlocal3
+            debugline 175
+            getlocal1
+            getproperty QName(PackageNamespace(""),"to")
+            getproperty QName(PackageNamespace(""),"mapId")
+            convert_d
+            setlocal 4
+            debugline 176
+            getlex QName(PackageNamespace("com.ankamagames.dofus.datacenter.world"),"MapPosition")
+            getlocal 4
+            callproperty QName(PackageNamespace(""),"getMapPositionById"), 1
+            getproperty QName(PackageNamespace(""),"subAreaId")
+            convert_i
+            setlocal 5
+            debugline 178
+            getlocal3
+            getlocal 5
+            ifne ofs007d
+            debugline 179
+            pushtrue
+            returnvalue
+   ofs007d:
+            debugline 181
+            getlex QName(PrivateNamespace("com.ankamagames.dofus.modules.utils.pathfinding.astar:AStar"),"_forbiddenSubareaIds")
+            getlocal 5
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            pushbyte -1
+            ifeq ofs0096
+            debugline 182
+            pushtrue
+            returnvalue
+   ofs0096:
+            debugline 184
+            pushtrue
+            returnvalue
+         end ; code
+      end ; body
+   end ; method
+end ; trait
