@@ -1,0 +1,61 @@
+trait method QName(PackageNamespace(""),"serializeAs_ChangeMapMessage")
+   dispid 0
+   method
+      name "com.ankamagames.dofus.network.messages.game.context.roleplay:ChangeMapMessage/serializeAs_ChangeMapMessage"
+      flag HAS_PARAM_NAMES
+      param QName(PackageNamespace("com.ankamagames.jerakine.network"),"ICustomDataOutput")
+      paramname "uint"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 3
+         localcount 2
+         initscopedepth 5
+         maxscopedepth 6
+         
+         code
+            debugfile "C:\\akrb1bld1dof03-a\\work\\cbe7d596d85455f\\client-parent-air\\patina\\target\\generated-sources\\flex;com\\ankamagames\\dofus\\network\\messages\\game\\context\\roleplay;ChangeMapMessage.as"
+            debugline 149
+            getlocal0
+            pushscope
+            debug 1, "output", 0, 149
+            debugline 152
+            getlocal0
+            getproperty QName(PackageNamespace(""),"mapId")
+            pushbyte 0
+            lessthan
+            dup
+            iftrue ofs0027
+            pop
+            getlocal0
+            getproperty QName(PackageNamespace(""),"mapId")
+            pushdouble 9007199254740992
+            greaterthan
+   ofs0027:
+            iffalse ofs0042
+            debugline 153
+            findpropstrict QName(PackageNamespace(""),"Error")
+            pushstring "Forbidden value ("
+            getlocal0
+            getproperty QName(PackageNamespace(""),"mapId")
+            add
+            pushstring ") on element mapId."
+            add
+            constructprop QName(PackageNamespace(""),"Error"), 1
+            throw
+   ofs0042:
+            debugline 154
+            getlocal1
+            getlocal0
+            getproperty QName(PackageNamespace(""),"mapId")
+            callpropvoid QName(Namespace("flash.utils:IDataOutput"),"writeDouble"), 1
+            debugline 155
+            getlocal1
+            pushfalse
+            callpropvoid QName(Namespace("flash.utils:IDataOutput"),"writeBoolean"), 1
+            debugline 156
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait
