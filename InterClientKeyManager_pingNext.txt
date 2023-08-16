@@ -1,0 +1,99 @@
+trait method QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"pingNext")
+   dispid 0
+   method
+      name "com.ankamagames.dofus.misc.interClient:InterClientKeyManager/private:pingNext"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 3
+         localcount 4
+         initscopedepth 4
+         maxscopedepth 5
+         
+         code
+            debugfile "C:\\akrb1bld1dof03-a\\work\\cbe7d596d85455f\\client-parent-air\\core\\src\\main\\flex;com\\ankamagames\\dofus\\misc\\interClient;InterClientKeyManager.as"
+            debugline 146
+            getlocal0
+            pushscope
+            pushnull
+            coerce_s
+            setlocal1
+            debugline 147
+            getlocal0
+            dup
+            setlocal2
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_currentClientId")
+            increment
+            setlocal3
+            getlocal2
+            getlocal3
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_currentClientId")
+            kill 3
+            kill 2
+            debugline 149
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_currentClientId")
+            getlex QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"MAX_CLIENTS")
+            ifnle ofs005d
+            debug 1, "connectionName", 0, 150
+            debugline 150
+            getlex QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"CONNECTION_NAME")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_currentClientId")
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"toString"), 0
+            add
+            coerce_s
+            setlocal1
+            debugline 151
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_sendingLc")
+            getlocal1
+            pushstring "ping"
+            callpropvoid QName(PackageNamespace(""),"send"), 2
+            jump ofs00c1
+   ofs005d:
+            debugline 154
+            getlex QName(PackageNamespace("com.ankamagames.dofus.misc.interClient"),"InterClientManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_clientsIds")
+            getproperty QName(PackageNamespace(""),"length")
+            pushbyte 1
+            add
+            setproperty QName(PackageNamespace(""),"numClients")
+            debugline 157
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_clientsIds")
+            getproperty QName(PackageNamespace(""),"length")
+            pushbyte 10
+            ifeq ofs0090
+            debugline 158
+            getlocal0
+            callpropvoid QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"generateKey"), 0
+            jump ofs00c1
+   ofs0090:
+            debugline 160
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_connected")
+            iffalse ofs00b0
+            debugline 162
+            getlocal0
+            pushbyte 0
+            initproperty QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"_numAskedClients")
+            debugline 163
+            getlocal0
+            callpropvoid QName(PrivateNamespace("com.ankamagames.dofus.misc.interClient:InterClientKeyManager"),"askKeyFromClients"), 0
+            jump ofs00c1
+   ofs00b0:
+            debugline 167
+            getlex QName(PackageNamespace("com.ankamagames.dofus.kernel"),"Kernel")
+            getlex QName(PackageNamespace("com.ankamagames.dofus.kernel"),"PanicMessages")
+            getproperty QName(PackageNamespace(""),"TOO_MANY_CLIENTS")
+            callpropvoid QName(PackageNamespace(""),"panic"), 1
+   ofs00c1:
+            debugline 170
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait
