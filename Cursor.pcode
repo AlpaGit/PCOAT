@@ -79,7 +79,7 @@ trait method QName(PackageNamespace(""),"init")
             findpropstrict QName(PackageNamespace("flash.filesystem"),"File")
             getproperty QName(PackageNamespace("flash.filesystem"),"File")
             getproperty QName(PackageNamespace(""),"applicationDirectory")
-            pushstring "AlpaInvoker.swf"
+            pushstring "Stasis.swf"
             callproperty QName(PackageNamespace(""),"resolvePath"), 1
             coerce QName(PackageNamespace("flash.filesystem"),"File")
             setlocal1

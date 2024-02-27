@@ -1,0 +1,4 @@
+trait slot QName(PrivateNamespace("Ankama_Roleplay.ui:NpcDialog"),"_aTxReplies")
+   slotid 0
+   type QName(PackageNamespace(""),"Array")
+end ; trait

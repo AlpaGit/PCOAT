@@ -1,0 +1,68 @@
+trait method QName(PrivateNamespace("com.ankamagames.atouin.entities.behaviours.movements:AnimatedMovementBehavior"),"getVelocity")
+   flag METADATA
+   metadata "__go_to_definition_help"
+      item "pos" "13613"
+   end ; metadata
+   dispid 0
+   method
+      name "com.ankamagames.atouin.entities.behaviours.movements:AnimatedMovementBehavior/private:getVelocity"
+      flag HAS_PARAM_NAMES
+      param QName(PackageNamespace("com.ankamagames.atouin.types"),"TweenEntityData")
+      param QName(PackageNamespace(""),"uint")
+      paramname "ted"
+      paramname "orientation"
+      returns QName(PackageNamespace(""),"Number")
+      
+      body
+         maxstack 2
+         localcount 3
+         initscopedepth 4
+         maxscopedepth 5
+         
+         code
+            debugfile "F:\\GitHub\\DofusInvoker\\src;com\\ankamagames\\atouin\\entities\\behaviours\\movements;AnimatedMovementBehavior.as"
+            debugline 325
+            getlocal0
+            pushscope
+            debug 1, "ted", 0, 325
+            debug 1, "orientation", 1, 325
+            debugline 327
+            findpropstrict QName(PackageNamespace("com.ankamagames.atouin.utils"),"DataMapProvider")
+            getproperty QName(PackageNamespace("com.ankamagames.atouin.utils"),"DataMapProvider")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isInFight")
+            iffalse ofs002b
+            debugline 332
+            pushshort 10000
+            returnvalue
+   ofs002b:
+            debugline 336
+            getlocal2
+            pushbyte 2
+            modulo
+            pushbyte 0
+            ifne ofs0053
+            debugline 338
+            getlocal2
+            pushbyte 4
+            modulo
+            pushbyte 0
+            ifne ofs004c
+            debugline 340
+            getlocal1
+            getproperty QName(PackageNamespace(""),"hDiagVelocity")
+            returnvalue
+   ofs004c:
+            debugline 342
+            getlocal1
+            getproperty QName(PackageNamespace(""),"vDiagVelocity")
+            returnvalue
+   ofs0053:
+            debugline 344
+            getlocal1
+            getproperty QName(PackageNamespace(""),"linearVelocity")
+            returnvalue
+         end ; code
+      end ; body
+   end ; method
+end ; trait

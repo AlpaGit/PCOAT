@@ -1,0 +1,216 @@
+trait method QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"addCasterAnimationStep")
+   flag METADATA
+   metadata "__go_to_definition_help"
+      item "pos" "4067"
+   end ; metadata
+   dispid 0
+   method
+      name "com.ankamagames.dofus.scripts.spells:SpellScriptBase/protected:addCasterAnimationStep"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 6
+         localcount 6
+         initscopedepth 4
+         maxscopedepth 5
+         
+         code
+            debugfile "F:\\GitHub\\DofusInvoker\\src;com\\ankamagames\\dofus\\scripts\\spells;SpellScriptBase.as"
+            debugline 87
+            getlocal0
+            pushscope
+            pushbyte 0
+            setlocal1
+            pushfalse
+            setlocal2
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"ISequencable")
+            setlocal3
+            pushnull
+            coerce QName(PackageNamespace(""),"Class")
+            setlocal 5
+            debug 1, "animId", 0, 89
+            debug 1, "allowSpellEffects", 1, 90
+            debug 1, "animationStep", 2, 91
+            debug 1, "isAnimationDisabled", 3, 92
+            debugline 92
+            pushfalse
+            convert_b
+            setlocal 4
+            debugline 94
+            findpropstrict QName(PackageNamespace("com.ankamagames.atouin.utils"),"DataMapProvider")
+            getproperty QName(PackageNamespace("com.ankamagames.atouin.utils"),"DataMapProvider")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isInFight")
+            iffalse ofs008d
+            debug 1, "pocketButtonClass", 4, 95
+            debugline 95
+            findpropstrict QName(PackageNamespace("flash.utils"),"getDefinitionByName")
+            pushstring "Alpa_Module.ui::PocketButton"
+            callproperty QName(PackageNamespace("flash.utils"),"getDefinitionByName"), 1
+            findpropstrict QName(PackageNamespace(""),"Class")
+            getproperty QName(PackageNamespace(""),"Class")
+            astypelate
+            coerce QName(PackageNamespace(""),"Class")
+            setlocal 5
+            debugline 96
+            getlocal 5
+            convert_b
+            dup
+            convert_b
+            iffalse ofs0083
+            pop
+            getlocal 5
+            pushstring "NoAnimEnabled"
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),StaticProtectedNs("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),PackageNamespace(""),ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),PrivateNamespace("SpellScriptBase.as$2416"),PackageNamespace("com.ankamagames.dofus.scripts.spells"),PackageInternalNs("com.ankamagames.dofus.scripts.spells"),Namespace("http://adobe.com/AS3/2006/builtin")])
+            convert_b
+   ofs0083:
+            iffalse ofs008d
+            debugline 97
+            pushtrue
+            convert_b
+            setlocal 4
+   ofs008d:
+            debugline 101
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"caster")
+            convert_b
+            dup
+            convert_b
+            iffalse ofs00b3
+            pop
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"spell")
+            pushstring "animId"
+            callproperty QName(PackageNamespace(""),"HasSpellParam"), 2
+            convert_b
+   ofs00b3:
+            iffalse ofs01c9
+            debugline 103
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"spell")
+            pushstring "animId"
+            callproperty QName(PackageNamespace(""),"GetSpellParam"), 2
+            convert_i
+            setlocal1
+            debugline 104
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"OptionManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"OptionManager")
+            pushstring "dofus"
+            callproperty QName(PackageNamespace(""),"getOptionManager"), 1
+            pushstring "allowSpellEffects"
+            callproperty QName(PackageNamespace(""),"getOption"), 1
+            convert_b
+            setlocal2
+            debugline 105
+            getlocal2
+            not
+            convert_b
+            dup
+            convert_b
+            iffalse ofs0101
+            pop
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"caster")
+            getproperty QName(PackageNamespace(""),"id")
+            pushbyte 0
+            greaterthan
+            convert_b
+   ofs0101:
+            dup
+            convert_b
+            iffalse ofs0117
+            pop
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isFighting")
+            convert_b
+   ofs0117:
+            iffalse ofs0127
+            debugline 107
+            findpropstrict QName(StaticProtectedNs("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"DEFAULT_CASTER_ANIMATION")
+            getproperty QName(StaticProtectedNs("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"DEFAULT_CASTER_ANIMATION")
+            convert_i
+            setlocal1
+   ofs0127:
+            debugline 110
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SequenceApi")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SequenceApi")
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"caster")
+            pushstring "AnimAttaque"
+            getlocal1
+            add
+            pushtrue
+            pushtrue
+            pushstring "SHOT"
+            callproperty QName(PackageNamespace(""),"CreatePlayAnimationStep"), 5
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"ISequencable")
+            setlocal3
+            debugline 112
+            getlocal 4
+            iffalse ofs0168
+            debugline 113
+            findpropstrict QName(StaticProtectedNs("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"DEFAULT_CASTER_ANIMATION")
+            getproperty QName(StaticProtectedNs("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"DEFAULT_CASTER_ANIMATION")
+            convert_i
+            setlocal1
+            debugline 114
+            getlocal3
+            pushdouble 1e-15
+            setproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencable"),"timeout")
+   ofs0168:
+            debugline 117
+            getlocal1
+            pushint 400000
+            ifngt ofs017f
+            debugline 119
+            getlocal3
+            getlocal3
+            getproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencable"),"timeout")
+            pushbyte 2
+            multiply
+            setproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencable"),"timeout")
+   ofs017f:
+            debugline 121
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"latestStep")
+            not
+            iffalse ofs01a5
+            debugline 123
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"runner")
+            getlocal3
+            callproperty QName(PackageNamespace(""),"AddFrontStep"), 2
+            pop
+            jump ofs01c0
+   ofs01a5:
+            debugline 127
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.scripts.api"),"SpellFxApi")
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"runner")
+            getlocal0
+            getproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"latestStep")
+            getlocal3
+            callproperty QName(PackageNamespace(""),"AddStepAfter"), 3
+            pop
+   ofs01c0:
+            debugline 129
+            getlocal0
+            getlocal3
+            setproperty QName(ProtectedNamespace("com.ankamagames.dofus.scripts.spells:SpellScriptBase"),"latestStep")
+   ofs01c9:
+            debugline 131
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait

@@ -1,0 +1,1330 @@
+trait method QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"executeBuffer")
+   flag METADATA
+   metadata "__go_to_definition_help"
+      item "pos" "88162"
+   end ; metadata
+   dispid 0
+   method
+      name "com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame/private:executeBuffer"
+      flag HAS_PARAM_NAMES
+      param QName(PackageNamespace(""),"Function")
+      paramname "callback"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 8
+         localcount 40
+         initscopedepth 4
+         maxscopedepth 5
+         
+         code
+            debugfile "F:\\GitHub\\DofusInvoker\\src;com\\ankamagames\\dofus\\logic\\game\\fight\\frames;FightSequenceFrame.as"
+            debugline 1518
+            getlocal0
+            pushscope
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"ISequencable")
+            setlocal2
+            pushfalse
+            setlocal3
+            pushfalse
+            setlocal 4
+            pushnull
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 5
+            pushnull
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 6
+            pushfalse
+            setlocal 7
+            pushnull
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 8
+            pushnull
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 9
+            pushnull
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 10
+            pushnull
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 11
+            pushnull
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 12
+            pushbyte 0
+            setlocal 13
+            pushbyte 0
+            setlocal 14
+            pushundefined
+            coerce_a
+            setlocal 15
+            pushundefined
+            coerce_a
+            setlocal 16
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"WaitAnimationEventStep")
+            setlocal 17
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            setlocal 18
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDeathStep")
+            setlocal 19
+            pushbyte 0
+            setlocal 20
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightActionPointsVariationStep")
+            setlocal 21
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            setlocal 22
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.entities.interfaces"),"IEntity")
+            setlocal 23
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            setlocal 24
+            pushnull
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.entities.interfaces"),"IEntity")
+            setlocal 25
+            pushbyte 0
+            setlocal 26
+            pushbyte 0
+            setlocal 27
+            pushundefined
+            coerce_a
+            setlocal 28
+            pushbyte 0
+            convert_u
+            setlocal 29
+            pushfalse
+            setlocal 34
+            pushfalse
+            setlocal 35
+            pushnull
+            coerce QName(PackageNamespace(""),"Class")
+            setlocal 37
+            debug 1, "callback", 0, 1518
+            debug 1, "step", 1, 1519
+            debug 1, "allowHitAnim", 2, 1520
+            debug 1, "allowSpellEffects", 3, 1521
+            debug 1, "startStep", 4, 1522
+            debug 1, "endStep", 5, 1523
+            debug 1, "removed", 6, 1524
+            debug 1, "entityAttaqueAnimWait", 7, 1525
+            debug 1, "lifeLoseSum", 8, 1526
+            debug 1, "lifeLoseLastStep", 9, 1527
+            debug 1, "shieldLoseSum", 10, 1528
+            debug 1, "shieldLoseLastStep", 11, 1529
+            debug 1, "deathNumber", 12, 1530
+            debug 1, "i", 13, 1531
+            debug 1, "b", 14, 1532
+            debug 1, "index", 15, 1533
+            debug 1, "waitStep", 16, 1534
+            debug 1, "animStep", 17, 1535
+            debug 1, "deathStep", 18, 1536
+            debug 1, "deadEntityIndex", 19, 1537
+            debug 1, "fapvs", 20, 1538
+            debug 1, "fspvs", 21, 1539
+            debug 1, "fspvsTarget", 22, 1540
+            debug 1, "flvs", 23, 1541
+            debug 1, "flvsTarget", 24, 1542
+            debug 1, "idx", 25, 1543
+            debug 1, "idx2", 26, 1544
+            debug 1, "loseLifeTarget", 27, 1545
+            debug 1, "j", 28, 1546
+            debug 1, "cleanedBuffer", 29, 1547
+            debug 1, "deathStepRef", 30, 1548
+            debug 1, "hitStep", 31, 1549
+            debug 1, "loseLifeStep", 32, 1550
+            debug 1, "waitHitEnd", 33, 1551
+            debug 1, "isAnimationDisabled", 34, 1571
+            debug 1, "allowDeathAnim", 35, 1580
+            debugline 1547
+            newarray 0
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 30
+            debugline 1548
+            findpropstrict QName(PackageNamespace("flash.utils"),"Dictionary")
+            pushtrue
+            constructprop QName(PackageNamespace("flash.utils"),"Dictionary"), 1
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 31
+            debugline 1549
+            findpropstrict Multiname("Vector",[PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            getproperty Multiname("Vector",[PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            getproperty QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            applytype 1
+            construct 0
+            coerce TypeName(QName(PackageNamespace("__AS3__.vec"),"Vector")<QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")>)
+            setlocal 32
+            debugline 1550
+            findpropstrict QName(PackageNamespace("flash.utils"),"Dictionary")
+            pushtrue
+            constructprop QName(PackageNamespace("flash.utils"),"Dictionary"), 1
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 33
+            debugline 1552
+            pushbyte 0
+            setlocal 38
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_stepsBuffer")
+            coerce_a
+            setlocal 39
+            jump ofs0222
+   ofs0202:
+            label
+            getlocal 39
+            getlocal 38
+            nextvalue
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"ISequencable")
+            setlocal2
+            debugline 1553
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightMarkTriggeredStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightMarkTriggeredStep")
+            istypelate
+            iffalse ofs0222
+            debugline 1554
+            pushtrue
+            convert_b
+            setlocal 34
+   ofs0222:
+            debugline 1552
+            hasnext2 39, 38
+            iftrue ofs0202
+            kill 39
+            kill 38
+            debugline 1559
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"OptionManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"OptionManager")
+            pushstring "dofus"
+            callproperty QName(PackageNamespace(""),"getOptionManager"), 1
+            pushstring "allowHitAnim"
+            callproperty QName(PackageNamespace(""),"getOption"), 1
+            convert_b
+            setlocal3
+            debugline 1560
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.managers"),"OptionManager")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.managers"),"OptionManager")
+            pushstring "dofus"
+            callproperty QName(PackageNamespace(""),"getOptionManager"), 1
+            pushstring "allowSpellEffects"
+            callproperty QName(PackageNamespace(""),"getOption"), 1
+            convert_b
+            setlocal 4
+            debugline 1561
+            newarray 0
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 5
+            debugline 1562
+            newarray 0
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 6
+            debugline 1563
+            findpropstrict QName(PackageNamespace("flash.utils"),"Dictionary")
+            constructprop QName(PackageNamespace("flash.utils"),"Dictionary"), 0
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 8
+            debugline 1564
+            findpropstrict QName(PackageNamespace("flash.utils"),"Dictionary")
+            pushtrue
+            constructprop QName(PackageNamespace("flash.utils"),"Dictionary"), 1
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 9
+            debugline 1565
+            findpropstrict QName(PackageNamespace("flash.utils"),"Dictionary")
+            pushtrue
+            constructprop QName(PackageNamespace("flash.utils"),"Dictionary"), 1
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 10
+            debugline 1566
+            findpropstrict QName(PackageNamespace("flash.utils"),"Dictionary")
+            pushtrue
+            constructprop QName(PackageNamespace("flash.utils"),"Dictionary"), 1
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 11
+            debugline 1567
+            findpropstrict QName(PackageNamespace("flash.utils"),"Dictionary")
+            pushtrue
+            constructprop QName(PackageNamespace("flash.utils"),"Dictionary"), 1
+            coerce QName(PackageNamespace("flash.utils"),"Dictionary")
+            setlocal 12
+            debugline 1568
+            pushbyte 0
+            convert_i
+            setlocal 13
+            debugline 1569
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_stepsBuffer")
+            getproperty QName(PackageNamespace(""),"length")
+            convert_i
+            setlocal 14
+            debugline 1571
+            pushfalse
+            convert_b
+            setlocal 35
+            debugline 1573
+            findpropstrict QName(PackageNamespace("com.ankamagames.atouin.utils"),"DataMapProvider")
+            getproperty QName(PackageNamespace("com.ankamagames.atouin.utils"),"DataMapProvider")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isInFight")
+            iffalse ofs032a
+            debug 1, "pocketButtonClass", 36, 1574
+            debugline 1574
+            findpropstrict QName(PackageNamespace("flash.utils"),"getDefinitionByName")
+            pushstring "Alpa_Module.ui::PocketButton"
+            callproperty QName(PackageNamespace("flash.utils"),"getDefinitionByName"), 1
+            findpropstrict QName(PackageNamespace(""),"Class")
+            getproperty QName(PackageNamespace(""),"Class")
+            astypelate
+            coerce QName(PackageNamespace(""),"Class")
+            setlocal 37
+            debugline 1575
+            getlocal 37
+            convert_b
+            dup
+            convert_b
+            iffalse ofs031f
+            pop
+            getlocal 37
+            pushstring "NoAnimEnabled"
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            convert_b
+   ofs031f:
+            iffalse ofs032a
+            debugline 1576
+            pushtrue
+            convert_b
+            setlocal 35
+   ofs032a:
+            debugline 1580
+            pushtrue
+            convert_b
+            setlocal 36
+            debugline 1582
+            getlocal 35
+            iffalse ofs0347
+            debugline 1583
+            pushtrue
+            convert_b
+            setlocal3
+            debugline 1584
+            pushfalse
+            convert_b
+            setlocal 4
+   ofs0347:
+            jump ofs0865
+   ofs034b:
+            label
+            debugline 1589
+            getlocal 7
+            convert_b
+            dup
+            convert_b
+            iffalse ofs035b
+            pop
+            getlocal2
+            convert_b
+   ofs035b:
+            iffalse ofs0368
+            debugline 1590
+            getlocal2
+            callproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencable"),"clear"), 0
+            pop
+   ofs0368:
+            debugline 1593
+            pushtrue
+            convert_b
+            setlocal 7
+            debugline 1594
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_stepsBuffer")
+            getlocal 14
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"ISequencable")
+            setlocal2
+            jump ofs0731
+   ofs0384:
+            label
+            debugline 1598
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            setlocal 18
+            debugline 1599
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"animation")
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace(""),"ANIM_HIT")
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            pushbyte -1
+            ifeq ofs048c
+            debugline 1600
+            getlocal3
+            not
+            iffalse ofs03c2
+            debugline 1601
+            jump ofs0865
+   ofs03c2:
+            debugline 1604
+            getlocal 18
+            getlocal 34
+            setproperty QName(PackageNamespace(""),"waitEvent")
+            debugline 1605
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            pushnull
+            equals
+            coerce_a
+            convert_b
+            dup
+            convert_b
+            iftrue ofs0400
+            pop
+            getlocal 31
+            findpropstrict QName(PackageNamespace("com.ankamagames.atouin.managers"),"EntitiesManager")
+            getproperty QName(PackageNamespace("com.ankamagames.atouin.managers"),"EntitiesManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.entities.interfaces"),"IEntity")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.entities.interfaces"),"IEntity")
+            astypelate
+            callproperty QName(PackageNamespace(""),"getEntityID"), 1
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            coerce_a
+            convert_b
+   ofs0400:
+            dup
+            convert_b
+            iftrue ofs0414
+            pop
+            getlocal 32
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            convert_b
+   ofs0414:
+            iffalse ofs041f
+            debugline 1606
+            jump ofs0865
+   ofs041f:
+            debugline 1609
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"animation")
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace(""),"ANIM_HIT")
+            equals
+            not
+            convert_b
+            dup
+            convert_b
+            iffalse ofs044d
+            pop
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"animation")
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace(""),"ANIM_HIT_CARRYING")
+            equals
+            not
+            convert_b
+   ofs044d:
+            dup
+            convert_b
+            iffalse ofs0466
+            pop
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"animation")
+            pushbyte 1
+            callproperty QName(PackageNamespace(""),"hasAnimation"), 2
+            not
+            convert_b
+   ofs0466:
+            iffalse ofs047c
+            debugline 1610
+            getlocal 18
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace(""),"ANIM_HIT")
+            setproperty QName(PackageNamespace(""),"animation")
+   ofs047c:
+            debugline 1613
+            getlocal 32
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+            pop
+   ofs048c:
+            debugline 1616
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_castingSpell")
+            convert_b
+            dup
+            convert_b
+            iffalse ofs04a6
+            pop
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_castingSpell")
+            getproperty QName(PackageNamespace(""),"casterId")
+            pushbyte 0
+            lessthan
+            convert_b
+   ofs04a6:
+            iffalse ofs0516
+            debugline 1617
+            getlocal 8
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            convert_b
+            iffalse ofs04e2
+            debugline 1618
+            getlocal 30
+            getlocal 8
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"unshift"), 1
+            pop
+            debugline 1619
+            getlocal 8
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            deleteproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            pop
+   ofs04e2:
+            debugline 1622
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"animation")
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace(""),"ANIM_ATTAQUE_BASE")
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            pushbyte -1
+            ifeq ofs0516
+            debugline 1623
+            getlocal 8
+            getlocal 18
+            getproperty QName(PackageNamespace(""),"target")
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"WaitAnimationEventStep")
+            getlocal 18
+            constructprop QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"WaitAnimationEventStep"), 1
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs0516:
+            debugline 1628
+            jump ofs0852
+   ofs051d:
+            label
+            debugline 1630
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDeathStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDeathStep")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDeathStep")
+            setlocal 19
+            debugline 1631
+            getlocal 31
+            getlocal 19
+            getproperty QName(PackageNamespace(""),"entityId")
+            pushtrue
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            debugline 1632
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_fightBattleFrame")
+            getproperty QName(PackageNamespace(""),"targetedEntities")
+            getlocal 19
+            getproperty QName(PackageNamespace(""),"entityId")
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            convert_i
+            setlocal 20
+            debugline 1633
+            getlocal 20
+            pushbyte -1
+            ifeq ofs058b
+            debugline 1634
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_fightBattleFrame")
+            getproperty QName(PackageNamespace(""),"targetedEntities")
+            getlocal 20
+            pushbyte 1
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"splice"), 2
+            pop
+            debugline 1635
+            findpropstrict QName(PackageNamespace("com.ankamagames.berilia.managers"),"TooltipManager")
+            getproperty QName(PackageNamespace("com.ankamagames.berilia.managers"),"TooltipManager")
+            pushstring "tooltipOverEntity_"
+            getlocal 19
+            getproperty QName(PackageNamespace(""),"entityId")
+            add
+            callproperty QName(PackageNamespace(""),"hide"), 1
+            pop
+   ofs058b:
+            debugline 1638
+            getlocal 13
+            increment_i
+            convert_i
+            setlocal 13
+            debugline 1639
+            jump ofs0852
+   ofs059b:
+            label
+            debugline 1641
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightActionPointsVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightActionPointsVariationStep")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightActionPointsVariationStep")
+            setlocal 21
+            debugline 1642
+            getlocal 21
+            getproperty QName(PackageNamespace(""),"voluntarlyUsed")
+            iffalse ofs05d3
+            debugline 1643
+            getlocal 5
+            getlocal 21
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+            pop
+            debugline 1644
+            pushfalse
+            convert_b
+            setlocal 7
+            debugline 1645
+            jump ofs0865
+   ofs05d3:
+            debugline 1648
+            jump ofs0852
+   ofs05da:
+            label
+            debugline 1650
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            setlocal 22
+            debugline 1651
+            getlocal 22
+            getproperty QName(PackageNamespace(""),"target")
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.entities.interfaces"),"IEntity")
+            setlocal 23
+            debugline 1652
+            getlocal 23
+            pushnull
+            ifne ofs0608
+            debugline 1653
+            jump ofs0852
+   ofs0608:
+            debugline 1656
+            getlocal 22
+            getproperty QName(PackageNamespace(""),"value")
+            pushbyte 0
+            ifnlt ofs0662
+            debugline 1657
+            getlocal 22
+            pushtrue
+            setproperty QName(PackageNamespace(""),"virtual")
+            debugline 1658
+            getlocal 11
+            getlocal 23
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            pushnull
+            ifne ofs063c
+            debugline 1659
+            getlocal 11
+            getlocal 23
+            pushbyte 0
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs063c:
+            debugline 1662
+            getlocal 11
+            getlocal 23
+            getlocal 11
+            getlocal 23
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            getlocal 22
+            getproperty QName(PackageNamespace(""),"value")
+            add
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            debugline 1663
+            getlocal 12
+            getlocal 23
+            getlocal 22
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs0662:
+            debugline 1666
+            jump ofs0852
+   ofs0669:
+            label
+            debugline 1668
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            setlocal 24
+            debugline 1669
+            getlocal 24
+            getproperty QName(PackageNamespace(""),"target")
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.entities.interfaces"),"IEntity")
+            setlocal 25
+            debugline 1670
+            getlocal 25
+            pushnull
+            ifne ofs0697
+            debugline 1671
+            jump ofs0852
+   ofs0697:
+            debugline 1674
+            getlocal 24
+            getproperty QName(PackageNamespace(""),"delta")
+            pushbyte 0
+            ifnlt ofs06b2
+            debugline 1675
+            getlocal 33
+            getlocal 25
+            getlocal 24
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs06b2:
+            debugline 1678
+            getlocal 9
+            getlocal 25
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            pushnull
+            ifne ofs06cf
+            debugline 1679
+            getlocal 9
+            getlocal 25
+            pushbyte 0
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs06cf:
+            debugline 1682
+            getlocal 9
+            getlocal 25
+            getlocal 9
+            getlocal 25
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            getlocal 24
+            getproperty QName(PackageNamespace(""),"delta")
+            add
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            debugline 1683
+            getlocal 10
+            getlocal 25
+            getlocal 24
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            debugline 1684
+            jump ofs0852
+   ofs06fc:
+            label
+            debugline 1690
+            getlocal 4
+            not
+            convert_b
+            dup
+            convert_b
+            iffalse ofs071a
+            pop
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.managers"),"PlayedCharacterManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getproperty QName(PackageNamespace(""),"isFighting")
+            convert_b
+   ofs071a:
+            iffalse ofs0725
+            debugline 1691
+            jump ofs0865
+   ofs0725:
+            debugline 1694
+            jump ofs0852
+   ofs072c:
+            label
+            jump ofs0852
+   ofs0731:
+            debugline 1596
+            pushtrue
+            setlocal 38
+            debugline 1597
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs074e
+            pushshort 0
+            jump ofs082a
+   ofs074e:
+            debugline 1629
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDeathStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDeathStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs0765
+            pushshort 1
+            jump ofs082a
+   ofs0765:
+            debugline 1640
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightActionPointsVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightActionPointsVariationStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs077c
+            pushshort 2
+            jump ofs082a
+   ofs077c:
+            debugline 1649
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs0793
+            pushshort 3
+            jump ofs082a
+   ofs0793:
+            debugline 1667
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs07aa
+            pushshort 4
+            jump ofs082a
+   ofs07aa:
+            debugline 1685
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGfxEntityStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGfxEntityStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs07c1
+            pushshort 5
+            jump ofs082a
+   ofs07c1:
+            debugline 1686
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGfxInLineStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGfxInLineStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs07d8
+            pushshort 6
+            jump ofs082a
+   ofs07d8:
+            debugline 1687
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGlyphGfxStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGlyphGfxStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs07ef
+            pushshort 7
+            jump ofs082a
+   ofs07ef:
+            debugline 1688
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.atouin.types.sequences"),"ParableGfxMovementStep")
+            getproperty QName(PackageNamespace("com.ankamagames.atouin.types.sequences"),"ParableGfxMovementStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs0806
+            pushshort 8
+            jump ofs082a
+   ofs0806:
+            debugline 1689
+            getlocal2
+            findpropstrict QName(PackageNamespace("com.ankamagames.atouin.types.sequences"),"AddWorldEntityStep")
+            getproperty QName(PackageNamespace("com.ankamagames.atouin.types.sequences"),"AddWorldEntityStep")
+            istypelate
+            getlocal 38
+            ifstrictne ofs081d
+            pushshort 9
+            jump ofs082a
+   ofs081d:
+            pushfalse
+            iffalse ofs0828
+            pushshort 10
+            jump ofs082a
+   ofs0828:
+            pushshort 10
+   ofs082a:
+            kill 38
+            lookupswitch ofs072c, [ofs0384, ofs051d, ofs059b, ofs05da, ofs0669, ofs06fc, ofs06fc, ofs06fc, ofs06fc, ofs06fc, ofs072c]
+   ofs0852:
+            debugline 1697
+            pushfalse
+            convert_b
+            setlocal 7
+            debugline 1698
+            getlocal 30
+            getlocal2
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"unshift"), 1
+            pop
+   ofs0865:
+            debugline 1588
+            getlocal 14
+            decrement_i
+            dup
+            convert_i
+            setlocal 14
+            pushbyte 0
+            ifge ofs034b
+            debugline 1701
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_fightBattleFrame")
+            getlocal 13
+            setproperty QName(PackageNamespace(""),"deathPlayingNumber")
+            debugline 1702
+            pushbyte 0
+            setlocal 38
+            getlocal 30
+            coerce_a
+            setlocal 39
+            jump ofs08e3
+   ofs0891:
+            label
+            getlocal 39
+            getlocal 38
+            nextvalue
+            coerce_a
+            setlocal 15
+            debugline 1703
+            getlocal 15
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            istypelate
+            convert_b
+            dup
+            convert_b
+            iffalse ofs08be
+            pop
+            getlocal 9
+            getlocal 15
+            getproperty Multiname("target",[PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            pushbyte 0
+            equals
+            convert_b
+   ofs08be:
+            dup
+            convert_b
+            iffalse ofs08d5
+            pop
+            getlocal 11
+            getlocal 15
+            getproperty Multiname("target",[PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            pushnull
+            equals
+            not
+            convert_b
+   ofs08d5:
+            iffalse ofs08e3
+            debugline 1704
+            getlocal 15
+            pushtrue
+            setproperty Multiname("skipTextEvent",[PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs08e3:
+            debugline 1702
+            hasnext2 39, 38
+            iftrue ofs0891
+            kill 39
+            kill 38
+            debugline 1709
+            pushbyte 0
+            setlocal 38
+            getlocal 9
+            coerce_a
+            setlocal 39
+            jump ofs0987
+   ofs0901:
+            label
+            getlocal 39
+            getlocal 38
+            nextname
+            coerce_a
+            setlocal 16
+            debugline 1710
+            getlocal 16
+            pushstring "null"
+            equals
+            not
+            convert_b
+            dup
+            convert_b
+            iffalse ofs092a
+            pop
+            getlocal 9
+            getlocal 16
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            pushbyte 0
+            equals
+            not
+            convert_b
+   ofs092a:
+            iffalse ofs096d
+            debugline 1711
+            getlocal 30
+            getlocal 10
+            getlocal 16
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            convert_i
+            setlocal 26
+            debugline 1712
+            getlocal 30
+            getlocal 26
+            pushbyte 0
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLossAnimStep")
+            getlocal 16
+            getlocal 9
+            getlocal 16
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLifeVariationStep")
+            getproperty QName(PackageNamespace(""),"COLOR")
+            constructprop QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLossAnimStep"), 3
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"splice"), 3
+            pop
+   ofs096d:
+            debugline 1715
+            getlocal 10
+            getlocal 16
+            pushbyte -1
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            debugline 1716
+            getlocal 9
+            getlocal 16
+            pushbyte 0
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs0987:
+            debugline 1709
+            hasnext2 39, 38
+            iftrue ofs0901
+            kill 39
+            kill 38
+            debugline 1719
+            pushbyte 0
+            setlocal 38
+            getlocal 11
+            coerce_a
+            setlocal 39
+            jump ofs0a2b
+   ofs09a5:
+            label
+            getlocal 39
+            getlocal 38
+            nextname
+            coerce_a
+            setlocal 16
+            debugline 1720
+            getlocal 16
+            pushstring "null"
+            equals
+            not
+            convert_b
+            dup
+            convert_b
+            iffalse ofs09ce
+            pop
+            getlocal 11
+            getlocal 16
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            pushbyte 0
+            equals
+            not
+            convert_b
+   ofs09ce:
+            iffalse ofs0a11
+            debugline 1721
+            getlocal 30
+            getlocal 12
+            getlocal 16
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            convert_i
+            setlocal 27
+            debugline 1722
+            getlocal 30
+            getlocal 27
+            pushbyte 0
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLossAnimStep")
+            getlocal 16
+            getlocal 11
+            getlocal 16
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightShieldPointsVariationStep")
+            getproperty QName(PackageNamespace(""),"COLOR")
+            constructprop QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightLossAnimStep"), 3
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"splice"), 3
+            pop
+   ofs0a11:
+            debugline 1725
+            getlocal 12
+            getlocal 16
+            pushbyte -1
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            debugline 1726
+            getlocal 11
+            getlocal 16
+            pushbyte 0
+            setproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+   ofs0a2b:
+            debugline 1719
+            hasnext2 39, 38
+            iftrue ofs09a5
+            kill 39
+            kill 38
+            debugline 1729
+            pushbyte 0
+            setlocal 38
+            getlocal 8
+            coerce_a
+            setlocal 39
+            jump ofs0a61
+   ofs0a49:
+            label
+            getlocal 39
+            getlocal 38
+            nextvalue
+            coerce QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"WaitAnimationEventStep")
+            setlocal 17
+            debugline 1730
+            getlocal 6
+            getlocal 17
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+            pop
+   ofs0a61:
+            debugline 1729
+            hasnext2 39, 38
+            iftrue ofs0a49
+            kill 39
+            kill 38
+            debugline 1733
+            getlocal3
+            iffalse ofs0b1b
+            debugline 1734
+            pushbyte 0
+            setlocal 38
+            getlocal 33
+            coerce_a
+            setlocal 39
+            jump ofs0b0d
+   ofs0a87:
+            label
+            getlocal 39
+            getlocal 38
+            nextname
+            coerce_a
+            setlocal 28
+            debugline 1735
+            getlocal 32
+            getlocal 28
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+            pushbyte -1
+            ifne ofs0b0d
+            debugline 1736
+            pushbyte 0
+            convert_u
+            setlocal 29
+            jump ofs0aff
+   ofs0aae:
+            label
+            debugline 1738
+            getlocal 30
+            getlocal 29
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            getlocal 33
+            getlocal 28
+            getproperty MultinameL([PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),PackageNamespace(""),PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),PrivateNamespace("FightSequenceFrame.as$4089"),PackageInternalNs("com.ankamagames.dofus.logic.game.fight.frames"),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("__AS3__.vec"),ProtectedNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame")])
+            ifne ofs0af6
+            debugline 1739
+            getlocal 30
+            getlocal 29
+            pushbyte 0
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            getlocal 28
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            getproperty QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            astypelate
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace(""),"ANIM_HIT")
+            pushtrue
+            pushfalse
+            constructprop QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep"), 4
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"splice"), 3
+            pop
+            debugline 1740
+            jump ofs0b0d
+   ofs0af6:
+            debugline 1743
+            getlocal 29
+            increment
+            convert_u
+            setlocal 29
+   ofs0aff:
+            debugline 1737
+            getlocal 29
+            getlocal 30
+            getproperty QName(PackageNamespace(""),"length")
+            iflt ofs0aae
+   ofs0b0d:
+            debugline 1734
+            hasnext2 39, 38
+            iftrue ofs0a87
+            kill 39
+            kill 38
+   ofs0b1b:
+            debugline 1752
+            getlocal 5
+            getlocal 30
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"concat"), 1
+            getlocal 6
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"concat"), 1
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 30
+            debugline 1753
+            pushbyte 0
+            setlocal 38
+            getlocal 30
+            coerce_a
+            setlocal 39
+            jump ofs0b59
+   ofs0b42:
+            label
+            getlocal 39
+            getlocal 38
+            nextvalue
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"ISequencable")
+            setlocal2
+            debugline 1754
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_sequencer")
+            getlocal2
+            callproperty QName(PackageNamespace(""),"addStep"), 1
+            pop
+   ofs0b59:
+            debugline 1753
+            hasnext2 39, 38
+            iftrue ofs0b42
+            kill 39
+            kill 38
+            debugline 1757
+            getlocal0
+            callproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"clearBuffer"), 0
+            pop
+            debugline 1758
+            getlocal1
+            pushnull
+            equals
+            not
+            convert_b
+            dup
+            convert_b
+            iffalse ofs0b85
+            pop
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_parent")
+            not
+            convert_b
+   ofs0b85:
+            iffalse ofs0bbd
+            debugline 1759
+            getlocal0
+            getlocal1
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_sequenceEndCallback")
+            debugline 1760
+            getlocal0
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.types"),"Callback")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"showPermanentTooltips")
+            getlocal 30
+            constructprop QName(PackageNamespace("com.ankamagames.jerakine.types"),"Callback"), 2
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_permanentTooltipsCallback")
+            debugline 1761
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_sequencer")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.types.events"),"SequencerEvent")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.types.events"),"SequencerEvent")
+            getproperty QName(PackageNamespace(""),"SEQUENCE_END")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"onSequenceEnd")
+            callproperty QName(PackageNamespace(""),"addEventListener"), 2
+            pop
+   ofs0bbd:
+            debugline 1764
+            findproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_lastCastingSpell")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_castingSpell")
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_lastCastingSpell")
+            debugline 1765
+            getlocal0
+            pushtrue
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_scriptInit")
+            debugline 1766
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_parent")
+            not
+            iffalse ofs0c1e
+            debugline 1767
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_subSequenceWaitingCount")
+            not
+            iffalse ofs0bfc
+            debugline 1768
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_sequencer")
+            callproperty QName(PackageNamespace(""),"start"), 0
+            pop
+            jump ofs0c1a
+   ofs0bfc:
+            debugline 1770
+            findpropstrict QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_log")
+            getproperty QName(StaticProtectedNs("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_log")
+            pushstring "Waiting sub sequence init end ("
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_subSequenceWaitingCount")
+            add
+            pushstring " seq)"
+            add
+            callproperty QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"warn"), 1
+            pop
+   ofs0c1a:
+            jump ofs0c3b
+   ofs0c1e:
+            debugline 1774
+            getlocal1
+            pushnull
+            ifeq ofs0c2f
+            debugline 1775
+            getlocal1
+            getglobalscope
+            call 0
+            pop
+   ofs0c2f:
+            debugline 1778
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"_parent")
+            callproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.frames:FightSequenceFrame"),"subSequenceInitDone"), 0
+            pop
+   ofs0c3b:
+            debugline 1781
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait

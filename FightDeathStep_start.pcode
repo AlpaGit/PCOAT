@@ -1,0 +1,371 @@
+trait method QName(PackageNamespace(""),"start")
+   flag OVERRIDE
+   flag METADATA
+   metadata "__go_to_definition_help"
+      item "pos" "3272"
+   end ; metadata
+   dispid 0
+   method
+      name "com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep/start"
+      returns QName(PackageNamespace(""),"void")
+      
+      body
+         maxstack 6
+         localcount 9
+         initscopedepth 6
+         maxscopedepth 7
+         
+         code
+            debugfile "F:\\GitHub\\DofusInvoker\\src;com\\ankamagames\\dofus\\logic\\game\\fight\\steps;FightDeathStep.as"
+            debugline 75
+            getlocal0
+            pushscope
+            pushfalse
+            setlocal2
+            debug 1, "isAnimationDisabled", 0, 77
+            debug 1, "waitAnimation", 1, 86
+            debug 1, "dyingEntity", 2, 87
+            debug 1, "fighterInfos", 3, 95
+            debug 1, "fighterStats", 4, 96
+            debug 1, "fightBattleFrame", 5, 97
+            debug 1, "impactedTarget", 6, 104
+            debug 1, "dyingEntitySprite", 7, 122
+            debugline 77
+            pushtrue
+            convert_b
+            setlocal1
+            debugline 87
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.misc"),"DofusEntities")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.common.misc"),"DofusEntities")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_entityId")
+            callproperty QName(PackageNamespace(""),"getEntity"), 1
+            coerce QName(PackageNamespace("com.ankamagames.jerakine.entities.interfaces"),"IEntity")
+            setlocal3
+            debugline 88
+            getlocal3
+            not
+            iffalse ofs006f
+            debugline 90
+            findpropstrict QName(StaticProtectedNs("com.ankamagames.jerakine.sequencer:AbstractSequencable"),"_log")
+            getproperty QName(StaticProtectedNs("com.ankamagames.jerakine.sequencer:AbstractSequencable"),"_log")
+            pushstring "Unable to play death of an unexisting fighter "
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_entityId")
+            add
+            pushstring "."
+            add
+            callproperty QName(Namespace("com.ankamagames.jerakine.logger:Logger"),"warn"), 1
+            pop
+            debugline 91
+            getlocal0
+            pushtrue
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_needToWarn")
+            debugline 92
+            getlocal0
+            callproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"deathFinished"), 0
+            pop
+            debugline 93
+            returnvoid
+   ofs006f:
+            debugline 95
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightEntitiesFrame")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightEntitiesFrame")
+            callproperty QName(PackageNamespace(""),"getCurrentInstance"), 0
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_entityId")
+            callproperty QName(PackageNamespace(""),"getEntityInfos"), 1
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.network.types.game.context.fight"),"GameFightFighterInformations")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.network.types.game.context.fight"),"GameFightFighterInformations")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.dofus.network.types.game.context.fight"),"GameFightFighterInformations")
+            setlocal 4
+            debugline 96
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.common.managers"),"StatsManager")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.common.managers"),"StatsManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getlocal 4
+            getproperty QName(PackageNamespace(""),"contextualId")
+            callproperty QName(PackageNamespace(""),"getStats"), 1
+            coerce QName(PackageNamespace("com.ankamagames.dofus.internalDatacenter.stats"),"EntityStats")
+            setlocal 5
+            debugline 97
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.kernel"),"Kernel")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.kernel"),"Kernel")
+            callproperty QName(PackageNamespace(""),"getWorker"), 0
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightBattleFrame")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightBattleFrame")
+            callproperty QName(PackageNamespace(""),"getFrame"), 1
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightBattleFrame")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightBattleFrame")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightBattleFrame")
+            setlocal 6
+            debugline 98
+            getlocal 6
+            convert_b
+            iffalse ofs00ca
+            debugline 100
+            getlocal 6
+            getproperty QName(PackageNamespace(""),"deadFightersList")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_entityId")
+            callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+            pop
+   ofs00ca:
+            debugline 102
+            getlocal0
+            pushtrue
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_needToWarn")
+            debugline 103
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.managers"),"BuffManager")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.managers"),"BuffManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getlocal3
+            getproperty QName(Namespace("com.ankamagames.jerakine.entities.interfaces:IEntity"),"id")
+            pushfalse
+            pushfalse
+            pushtrue
+            callproperty QName(PackageNamespace(""),"dispell"), 4
+            pop
+            debugline 104
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.managers"),"BuffManager")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.managers"),"BuffManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getlocal3
+            getproperty QName(Namespace("com.ankamagames.jerakine.entities.interfaces:IEntity"),"id")
+            pushfalse
+            pushtrue
+            callproperty QName(PackageNamespace(""),"removeLinkedBuff"), 3
+            coerce QName(PackageNamespace(""),"Array")
+            setlocal 7
+            debugline 105
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.managers"),"BuffManager")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.managers"),"BuffManager")
+            callproperty QName(PackageNamespace(""),"getInstance"), 0
+            getlocal3
+            getproperty QName(Namespace("com.ankamagames.jerakine.entities.interfaces:IEntity"),"id")
+            callproperty QName(PackageNamespace(""),"reaffectBuffs"), 1
+            pop
+            debugline 106
+            getlocal 5
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.internalDatacenter.stats"),"EntityStat")
+            findpropstrict QName(PackageNamespace("damageCalculation.tools"),"StatIds")
+            getproperty QName(PackageNamespace("damageCalculation.tools"),"StatIds")
+            getproperty QName(PackageNamespace(""),"CUR_PERMANENT_DAMAGE")
+            pushbyte 0
+            constructprop QName(PackageNamespace("com.ankamagames.dofus.internalDatacenter.stats"),"EntityStat"), 2
+            callproperty QName(PackageNamespace(""),"setStat"), 1
+            pop
+            debugline 107
+            getlocal 5
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.internalDatacenter.stats"),"EntityStat")
+            findpropstrict QName(PackageNamespace("damageCalculation.tools"),"StatIds")
+            getproperty QName(PackageNamespace("damageCalculation.tools"),"StatIds")
+            getproperty QName(PackageNamespace(""),"CUR_LIFE")
+            getlocal 5
+            callproperty QName(PackageNamespace(""),"getMaxHealthPoints"), 0
+            getlocal 5
+            findpropstrict QName(PackageNamespace("damageCalculation.tools"),"StatIds")
+            getproperty QName(PackageNamespace("damageCalculation.tools"),"StatIds")
+            getproperty QName(PackageNamespace(""),"CUR_PERMANENT_DAMAGE")
+            callproperty QName(PackageNamespace(""),"getStatTotalValue"), 1
+            add
+            negate
+            constructprop QName(PackageNamespace("com.ankamagames.dofus.internalDatacenter.stats"),"EntityStat"), 2
+            callproperty QName(PackageNamespace(""),"setStat"), 1
+            pop
+            debugline 108
+            getlocal0
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"SerialSequencer")
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightBattleFrame")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.frames"),"FightBattleFrame")
+            getproperty QName(PackageNamespace(""),"FIGHT_SEQUENCER_NAME")
+            constructprop QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"SerialSequencer"), 1
+            setproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            debugline 109
+            getlocal3
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            getproperty QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            istypelate
+            iffalse ofs01c4
+            debugline 111
+            getlocal 6
+            convert_b
+            dup
+            convert_b
+            iffalse ofs0172
+            pop
+            getlocal 6
+            getproperty QName(PackageNamespace(""),"deathPlayingNumber")
+            pushbyte 1
+            greaterthan
+            convert_b
+   ofs0172:
+            iffalse ofs0191
+            debugline 113
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGfxEntityStep")
+            pushshort 3182
+            getlocal 4
+            getproperty QName(PackageNamespace(""),"disposition")
+            getproperty QName(PackageNamespace(""),"cellId")
+            constructprop QName(PackageNamespace("com.ankamagames.dofus.types.sequences"),"AddGfxEntityStep"), 2
+            callproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencer"),"addStep"), 1
+            pop
+            jump ofs01ad
+   ofs0191:
+            debugline 117
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep")
+            getlocal3
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            getproperty QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            astypelate
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace("com.ankamagames.dofus.types.enums"),"AnimationEnum")
+            getproperty QName(PackageNamespace(""),"ANIM_MORT")
+            pushtrue
+            pushfalse
+            constructprop QName(PackageNamespace("com.ankamagames.tiphon.sequence"),"PlayAnimationStep"), 4
+            callproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencer"),"addStep"), 1
+            pop
+   ofs01ad:
+            debugline 119
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"CallbackStep")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.types"),"Callback")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"onAnimEnd")
+            getlocal3
+            constructprop QName(PackageNamespace("com.ankamagames.jerakine.types"),"Callback"), 2
+            constructprop QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"CallbackStep"), 1
+            callproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencer"),"addStep"), 1
+            pop
+   ofs01c4:
+            debugline 121
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"CallbackStep")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.types"),"Callback")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"manualRollOut")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_entityId")
+            constructprop QName(PackageNamespace("com.ankamagames.jerakine.types"),"Callback"), 2
+            constructprop QName(PackageNamespace("com.ankamagames.jerakine.sequencer"),"CallbackStep"), 1
+            callproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencer"),"addStep"), 1
+            pop
+            debugline 122
+            getlocal3
+            findpropstrict QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            getproperty QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            astypelate
+            coerce QName(PackageNamespace("com.ankamagames.tiphon.display"),"TiphonSprite")
+            setlocal 8
+            debugline 123
+            getlocal 8
+            not
+            convert_b
+            dup
+            convert_b
+            iftrue ofs01fc
+            pop
+            getlocal 8
+            getproperty QName(PackageNamespace(""),"parentSprite")
+            not
+            convert_b
+   ofs01fc:
+            dup
+            convert_b
+            iftrue ofs020e
+            pop
+            getlocal 8
+            getproperty QName(PackageNamespace(""),"parentSprite")
+            getproperty QName(PackageNamespace(""),"carriedEntity")
+            getlocal 8
+            equals
+            not
+            convert_b
+   ofs020e:
+            iffalse ofs025b
+            debugline 125
+            pushtrue
+            convert_b
+            setlocal2
+            debugline 126
+            getlocal 4
+            getproperty QName(PackageNamespace(""),"disposition")
+            getproperty QName(PackageNamespace(""),"cellId")
+            pushbyte -1
+            equals
+            convert_b
+            dup
+            convert_b
+            iftrue ofs0232
+            pop
+            getlocal 8
+            getproperty QName(PackageNamespace(""),"carriedEntity")
+            pushnull
+            strictequals
+            not
+            convert_b
+   ofs0232:
+            iffalse ofs023c
+            debugline 128
+            pushfalse
+            convert_b
+            setlocal2
+   ofs023c:
+            debugline 131
+            getlocal1
+            iffalse ofs024a
+            debugline 132
+            pushfalse
+            convert_b
+            setlocal2
+   ofs024a:
+            debugline 135
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            findpropstrict QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDestroyEntityStep")
+            getlocal3
+            getlocal2
+            constructprop QName(PackageNamespace("com.ankamagames.dofus.logic.game.fight.steps"),"FightDestroyEntityStep"), 2
+            callproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencer"),"addStep"), 1
+            pop
+   ofs025b:
+            debugline 137
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.types.events"),"SequencerEvent")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.types.events"),"SequencerEvent")
+            getproperty QName(PackageNamespace(""),"SEQUENCE_TIMEOUT")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"deathTimeOut")
+            callproperty QName(Namespace("flash.events:IEventDispatcher"),"addEventListener"), 2
+            pop
+            debugline 138
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            findpropstrict QName(PackageNamespace("com.ankamagames.jerakine.types.events"),"SequencerEvent")
+            getproperty QName(PackageNamespace("com.ankamagames.jerakine.types.events"),"SequencerEvent")
+            getproperty QName(PackageNamespace(""),"SEQUENCE_END")
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"deathFinished")
+            callproperty QName(Namespace("flash.events:IEventDispatcher"),"addEventListener"), 2
+            pop
+            debugline 139
+            getlocal0
+            getproperty QName(PrivateNamespace("com.ankamagames.dofus.logic.game.fight.steps:FightDeathStep"),"_deathSubSequence")
+            callproperty QName(Namespace("com.ankamagames.jerakine.sequencer:ISequencer"),"start"), 0
+            pop
+            debugline 140
+            returnvoid
+         end ; code
+      end ; body
+   end ; method
+end ; trait
